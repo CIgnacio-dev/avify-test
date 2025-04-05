@@ -12,7 +12,7 @@ module.exports = {
   output: {
     filename: '[name]-[contenthash:6].bundle.js',
     path: path.resolve(__dirname, 'dist'), 
-    publicPath: '/', 
+    publicPath: '/',                       
     clean: true,
   },
   resolve: {
@@ -39,7 +39,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'index.html',
+      template: path.resolve(__dirname, 'src/index.html'), 
     }),
     new MiniCssExtractPlugin({
       filename: '[name]-[contenthash:6].css',
